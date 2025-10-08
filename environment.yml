@@ -1,0 +1,6 @@
+name: bb
+channels:
+  - defaults
+dependencies:
+  - python=3.12
+prefix: /opt/miniconda3/envs/bb
