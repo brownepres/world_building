@@ -2,3 +2,4 @@ bb_obsidian/.obsidian/
 bb_obsidian/TODO.md
 .DS_Store
 test.ipynb
+__pycache__
