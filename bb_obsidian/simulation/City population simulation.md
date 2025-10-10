@@ -8,6 +8,7 @@ Things to simulate:
 		- Median is 30
 		- Ageing index is 45.0
 		- Simulate it using El Salvadors popoulation age pyramid: https://www.census.gov/popclock/world/es
+		- Sampling is done through weighted uniform sampling, different weights for women and men
 - Sex
 	- Should be around 50-50 but do some research
 - Job
