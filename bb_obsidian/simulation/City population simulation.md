@@ -9,6 +9,8 @@ Things to simulate:
 	- Create a list of jobs with weights and randomly pick
 - Monthly income
 	- Use dollars and figure out money systems, how much is how much. According that make distribution for each classes monthly income, make distributions overlapping
+	- Use germany income distribution for sampling: https://germanpedia.com/income-distribution-germany/
+	- Based on the german income distribution I have created a lognormal distribution (mu and sigma are in the constants.py file) which then I can sample using numpy for random incomes. Now i should find a way to sample according to cast. Or should I create 4 different lognorm distributions for all 4 casts? 
 - Family status
 	- Not sure if it is necessary right now
 - Number of kids
@@ -27,6 +29,7 @@ Age:
 	- 49-51 for women
 - Job: 
 - Monthly income
+	- Around 17% lower than the average 
 - Family status
 - Number of kids
 - Home distance from city centre
