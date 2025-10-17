@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
-from population_meta_data import Constants
+from simulations.population_meta_data import Constants
 
 #population class for generating population samples (individuals)
 CONSTANTS = Constants.CONSTANTS
@@ -16,6 +16,7 @@ class PopulationSampleGenerator():
         self.men_age_bins = CONSTANTS['cast'][self.cast]['men_age_bins']
         self.men_age_bin_prob = CONSTANTS['cast'][self.cast]['men_age_bin_prob']
         self.median_age = CONSTANTS['cast'][self.cast]['median_age']
+        self.mu, self.sigma = CONSTANTS['cast'][self.cast]['income_mu'], CONSTANTS['cast'][self.cast]['income_sigma']
 
     def simulateAge(self):
         #simulate women age first
@@ -78,7 +79,7 @@ class PopulationSampleGenerator():
         plt.tight_layout()
         plt.savefig(f'{self.cast}cast_age_and_sex_plot.png')
 
-        def simulateIncome(self, sample_size):
-            sample = np.random.lognorm(self.mu, self.sigma, sample_size)
-            return sample
+    def simulateIncome(self):
+        sample = np.random.lognormal(self.mu, self.sigma, self.sample_size)
+        return sample
         
