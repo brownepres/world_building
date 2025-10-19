@@ -12,6 +12,7 @@ Things to simulate:
 	- Use germany income distribution for sampling: https://germanpedia.com/income-distribution-germany/
 	- Based on the german income distribution I have created a lognormal distribution (mu and sigma are in the constants.py file) which then I can sample using numpy for random incomes. Now i should find a way to sample according to cast. Or should I create 4 different lognorm distributions for all 4 casts? 
 	- I should probably use different mu for each cast, a little lower mean a lower a cast is. 
+		- Simulation is done using age and cast dependent mu for every individual
 - Family status
 	- Not sure if it is necessary right now
 - Home distance from city centre (km)
