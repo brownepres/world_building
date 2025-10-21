@@ -33,5 +33,7 @@ The income simulation is fairly similar to what I've used for age simulation. I 
 $$ln X \sim \mathcal{N}(\mu, \sigma^2)$$
 
 In order to sample from a lognormal distribution, the mean and variance should be calculated. For the sake of simplicity, I have used a single variance for all sampling ($\sigma = 1.0756001862584008$), however the mean is dynamic. On one hand, I have set a generic mean value for each cast ($\mu_1 = 10.6$, $\mu_2 = 9.7$, $\mu_3 = 9.5$, $\mu_4 = 9$) which is changing based on the persons age. In most societies the connection between age and income in negative quadratical, therefore I needed to come up with an equation to calculate a person-specific mean for the lognormal distribution:
+
 $$\mu_ij = \mu_i + \beta_1 * (x_j - \overline x_i)/\sigma_xi - \beta_2 * ((x_j - \overline x_i)/\sigma_xi)^2$$
+
 Where $\mu_i$ is the cast's pre-defined mean, $\mu_ij$ is the mean used for a specific age in that specific class, $x_j$ is the specific age itself and $\overline x_i$ is the average age for the cast. 
