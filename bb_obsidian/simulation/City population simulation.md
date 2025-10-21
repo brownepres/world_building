@@ -18,8 +18,11 @@ sampled_age = np.random.uniform(age_bins[bin_indices], age_bins[bin_indices + 1]
 **The second caste** - office workers - are really similar to the third cast in the [[City 1 ( name tdb)]]. Therefore, I could not differ much in terms of age either, so I used Australia's population pyramid as a guideline, with the median age of a little below 38. 
 
 **The first caste** - old aristocrats - immediately remind me of the elderly West-European population, like Switzerland, France, the Netherlands for example. In the end I have decided to use Germany's population pyramid, which is rapidly aging, just as my tiny aristocrat caste, with the median age of 46.7. 
-![[Pasted image 20251021131104.png]]
 
+[Age distribution]("age_pyramids.png")
+
+
+### Income
 
 
 
