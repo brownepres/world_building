@@ -5,3 +5,4 @@
 - think about the folder structure
 - check whether the data is not too obvious (write a classifier for casts maybe)
 - write a very thorough blog on the mathematics behind the simulation of the population
+- for income sampling make not only the mu but the sigma dynamic, or at least changing between classes
