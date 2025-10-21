@@ -1,3 +1,0 @@
-- make the repo protected
-- python class for generating population samples whenever and wherever needed. Should address all generatable aspects with thorough care and research
-- python class for simulate households based on the population

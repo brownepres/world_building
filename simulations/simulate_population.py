@@ -53,7 +53,7 @@ class PopulationSampleGenerator():
 
         age_pyramid = (
             df
-            .groupby(['age_group', 'sex'])
+            .groupby(['age_group', 'sex'], observed=True)
             .size()
             .reset_index(name='count')
         )
@@ -82,8 +82,14 @@ class PopulationSampleGenerator():
     def simulateIncome(self):
         df = self.simulateAge()
         age_list = df['age'].to_list()
+        # age_related_mu = mu + beta1 * x - beta2 * x^2
+        # where x = normalized age distance from median age 
+        # where beta1 = 0.5
+        # where beta2 = 0.1
+
         samples = [np.random.lognormal(
-            self.income_mu + 0.3*((age-np.median(age_list))/np.std(age_list)), self.income_sigma) 
+            self.mu + 0.5*((age-np.median(age_list))/np.std(age_list)) - 0.2*(((age-np.median(age_list))/np.std(age_list))**2),
+            self.sigma) 
             for age in age_list]
         df['income'] = samples
         return df
