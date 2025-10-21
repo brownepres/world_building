@@ -84,7 +84,7 @@ class PopulationSampleGenerator():
         age_list = df['age'].to_list()
         # age_related_mu = mu + beta1 * x - beta2 * x^2
         # where x = normalized age distance from median age 
-        # where beta1 = 0.3
+        # where beta1 = 0.5
         # where beta2 = 0.1
 
         samples = [np.random.lognormal(

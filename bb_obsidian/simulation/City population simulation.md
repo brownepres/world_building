@@ -1,3 +1,38 @@
+In this essay I'll go through in a rather great extent in the simulation of population, the research, the whys and the maths behind it. The society of [[City 1 ( name tdb)]]  is caste based, four casts make up most of the cities population, which is a little below 400 000 souls. The casts dominate the everyday life, they all have different demographics, destinies, work they can do and so on. Therefore, it was important for me to simulate them as precisely as one possibly can. More information on the caste system and the castes is **here** (todo: add link)
+
+By city population simulation I mean to create a system (a python class in my case) which enables me to generate an age, sex, and income representative 10% sample from the population of [[City 1 ( name tdb)]]. 
+
+### Age
+Age plays a crucial role, the destiny of societies are based upon their demographics, how many children are born, what percentage of the population is able to work, how many elderly people relies on the workers. Since in the caste system all castes are rigorously separated, they follow different demographics. 
+
+**The fourth caste** - miners and farmers - live in the poorest conditions among all. Their demographics are pyramid like, containing more young people, due to having less access to protection, and families relying more on their children. Elderly are seldom, due to mostly inaccessible health care. Thus, originally, my idea was to use the demographics of Brazilian favelas to base the fourth caste on, however, the unreliable data convinced me otherwise. The median age for favela folks is around 30, which is similar to El Salvador, therefore the latter country has been chosen as the baseline for my fourth caste population. El Salvador's population pyramid is accessible through this [webpage](https://www.census.gov/popclock/world/es). The demographic bins and probabilities were collected in numpy arrays, and then simply sampled a demographic bin and an age from it. 
+
+```
+sampled_bin = np.random.choice(len(probabilities), size=sample_size, p=probabilities)
+
+sampled_age = np.random.uniform(age_bins[bin_indices], age_bins[bin_indices + 1])
+```
+
+**The third caste** - physical labour workers - operates with a median age of 36, slightly older than the fourth caste. For this exact caste, Uruguay's population pyramid has been chosen as guideline, a still young, yet mostly working age population. The method was very similar than for the fourth caste. 
+
+**The second caste** - office workers - are really similar to the third cast in the [[City 1 ( name tdb)]]. Therefore, I could not differ much in terms of age either, so I used Australia's population pyramid as a guideline, with the median age of a little below 38. 
+
+**The first caste** - old aristocrats - immediately remind me of the elderly West-European population, like Switzerland, France, the Netherlands for example. In the end I have decided to use Germany's population pyramid, which is rapidly aging, just as my tiny aristocrat caste, with the median age of 46.7. 
+![[Pasted image 20251021131104.png]]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 I will attempt to simulate the population of [[City 1 ( name tdb)]] along a few parameters, trying to make it representative. 
 The output I expect is a csv file with 35200 + 2800 instances, to make it a 10% sample of the original population number of the city. 
 
