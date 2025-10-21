@@ -19,7 +19,7 @@ sampled_age = np.random.uniform(age_bins[bin_indices], age_bins[bin_indices + 1]
 
 **The first caste** - old aristocrats - immediately remind me of the elderly West-European population, like Switzerland, France, the Netherlands for example. In the end I have decided to use Germany's population pyramid, which is rapidly aging, just as my tiny aristocrat caste, with the median age of 46.7. 
 
-[Age distribution]("age_pyramids.png")
+[Age distribution](age_pyramids.png)
 
 
 ### Income
