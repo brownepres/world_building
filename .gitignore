@@ -1,5 +1,7 @@
 bb_obsidian/.obsidian/
 bb_obsidian/TODO.md
+bb_obsidian/implementation_plan.md
+bb_obsidian/ideas.md
 .DS_Store
 test.ipynb
 __pycache__
