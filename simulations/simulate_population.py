@@ -87,10 +87,15 @@ class PopulationSampleGenerator():
         # where beta1 = 0.5
         # where beta2 = 0.1
 
-        samples = [np.random.lognormal(
-            self.mu + 0.5*((age-np.median(age_list))/np.std(age_list)) - 0.2*(((age-np.median(age_list))/np.std(age_list))**2),
-            self.sigma) 
-            for age in age_list]
-        df['income'] = samples
+        # simulate three different values and average them out, so there will be less outliers
+        for i in range(4):
+            samples = [np.random.lognormal(
+                self.mu + 0.5*((age-np.median(age_list))/np.std(age_list)) - 0.2*(((age-np.median(age_list))/np.std(age_list))**2),
+                self.sigma) 
+                for age in age_list]
+            df[f'income{i}'] = samples
+        
+        df['income'] = df[[f'income{i}' for i in range(4)]].mean(axis=1)
+        df = df.drop(columns=[f'income{i}' for i in range(4)])
         return df
         

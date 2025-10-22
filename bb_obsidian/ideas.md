@@ -1,8 +1,0 @@
-- Build a city name generator using pytorch and an RNN (will do once I learn it)
-- python class for generating a sample of the population whenever needed
-- simulate households based on the population sample, in order to receive more informative quantiativ metrics for economical simulation (like kids per household, number of gadgets per household, total household income, number of properties per household, etc). This data could provide a good base for further economical analysis and maybe even to build models
-- write a readme 
-- think about the folder structure
-- check whether the data is not too obvious (write a classifier for casts maybe)
-- write a very thorough blog on the mathematics behind the simulation of the population
-- for income sampling make not only the mu but the sigma dynamic, or at least changing between classes
