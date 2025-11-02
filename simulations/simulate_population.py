@@ -3,6 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 from population_meta_data import Constants
+import random
 
 #population class for generating population samples (individuals)
 CONSTANTS = Constants.CONSTANTS
@@ -79,14 +80,13 @@ class PopulationSampleGenerator():
         plt.tight_layout()
         plt.savefig(f'{self.cast}cast_age_and_sex_plot.png')
 
-    def simulateIncome(self):
-        df = self.simulateAge()
-        age_list = df['age'].to_list()
+    def simulateIncome(self, df):
+        #df = self.simulateAge()
         # age_related_mu = mu + beta1 * x - beta2 * x^2
         # where x = normalized age distance from median age 
         # where beta1 = 0.5
         # where beta2 = 0.1
-
+        age_list = df['age'].to_list()
         # simulate three different values and average them out, so there will be less outliers
         for i in range(4):
             samples = [np.random.lognormal(
@@ -97,5 +97,18 @@ class PopulationSampleGenerator():
         
         df['income'] = df[[f'income{i}' for i in range(4)]].mean(axis=1)
         df = df.drop(columns=[f'income{i}' for i in range(4)])
+        return pd.Series(df['income'])
+    
+    def simulateEducationLevel(self):
+        bins, probs, n = CONSTANTS["cast"][self.cast]['education_level'], CONSTANTS["cast"][self.cast]['education_level_prob'], CONSTANTS["cast"][self.cast]['sample_size']
+        samples = random.choices(bins, weights=probs, k=n)
+        return samples
+
+    def createSample(self):
+        df = self.simulateAge()
+        df['income'] = self.simulateIncome(df)
+        df['education'] = self.simulateEducationLevel()
+        df = df.drop(columns=[f'income{i}' for i in range(4)])
         return df
+
         

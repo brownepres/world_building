@@ -37,3 +37,8 @@ In order to sample from a lognormal distribution, the mean and variance should b
 $$\mu_ij = \mu_i + \beta_1 * (x_j - \overline x_i)/\sigma_xi - \beta_2 * ((x_j - \overline x_i)/\sigma_xi)^2$$
 
 Where $\mu_i$ is the cast's pre-defined mean, $\mu_ij$ is the mean used for a specific age in that specific class, $x_j$ is the specific age itself and $\overline x_i$ is the average age for the cast. 
+
+Education simulation is done with categorical numbers. 
+Cast 1: level 1 or rarely 2
+Cast 2 and 3: between level 2 and 5, 2-3-4 more probable
+Cast 4: level 5, rarely 4

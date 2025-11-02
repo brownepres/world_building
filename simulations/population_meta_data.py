@@ -11,7 +11,9 @@ class Constants():
             'men_age_bin_prob' : np.array([0.043, 0.045, 0.047, 0.044, 0.036, 0.030, 0.026, 0.022, 0.017, 0.015, 0.012, 0.009, 0.007, 0.005]), 
             'median_age': 30, 
             'income_mu':9, 
-            'income_sigma': 1.0756001862584008
+            'income_sigma': 1.0756001862584008, 
+            'education_level': [1, 2],
+            'education_level_prob' : [0.9, 0.1]
         }, 
         '3rd':{
             'women_ratio': 0.51, 
@@ -22,7 +24,9 @@ class Constants():
             'men_age_bin_prob': np.array([0.038, 0.037, 0.035, 0.032, 0.034, 0.03, 0.029, 0.027, 0.024, 0.019, 0.015, 0.011, 0.008, 0.004]), 
             'median_age': 36, 
             'income_mu':9.5, 
-            'income_sigma': 1.0756001862584008
+            'income_sigma': 1.0756001862584008, 
+            'education_level': [2, 3, 4, 5],
+            'education_level_prob' : [0.1, 0.3, 0.4, 0.2]
         }, 
         '2nd':{
             'women_ratio': 0.505, 
@@ -33,7 +37,9 @@ class Constants():
             'men_age_bin_prob': np.array([0.035, 0.037, 0.037, 0.035, 0.031, 0.033, 0.03, 0.03, 0.027, 0.024, 0.02, 0.014, 0.009, 0.005]), 
             'median_age': 38, 
             'income_mu':9.7, 
-            'income_sigma': 1.0756001862584008
+            'income_sigma': 1.0756001862584008, 
+            'education_level': [2, 3, 4, 5],
+            'education_level_prob' : [0.08, 0.27, 0.45, 0.2]
         }, 
         '1st':{
             'women_ratio': 0.51,
@@ -44,7 +50,9 @@ class Constants():
             'men_age_bin_prob': np.array([0.029, 0.032, 0.034, 0.032, 0.030, 0.033, 0.041, 0.04, 0.033, 0.028, 0.021, 0.021, 0.016, 0.007]), 
             'median_age': 46.7, 
             'income_mu':10.6, 
-            'income_sigma': 1.0756001862584008
+            'income_sigma': 1.0756001862584008, 
+            'education_level': [4, 5],
+            'education_level_prob' : [0.3, 0.7]
         }
     }
 }
