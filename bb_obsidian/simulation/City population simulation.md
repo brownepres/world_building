@@ -42,3 +42,5 @@ Education simulation is done with categorical numbers.
 Cast 1: level 1 or rarely 2
 Cast 2 and 3: between level 2 and 5, 2-3-4 more probable
 Cast 4: level 5, rarely 4
+
+Lifestyle/health score
